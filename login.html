@@ -27,5 +27,26 @@
       <p class="helper">Don't have an account? <a href="#">Sign up</a></p>
     </form>
   </div>
+  <script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // يمنع الإرسال التلقائي
+
+    const email = document.querySelector("input[type='email']").value;
+    const password = document.querySelector("input[type='password']").value;
+
+    if (!email.endsWith("@imamu.edu.sa")) {
+      alert("يرجى استخدام بريد جامعي ينتهي بـ @imamu.edu.sa");
+      return;
+    }
+
+    if (password.length < 6) {
+      alert("كلمة المرور يجب أن تكون 6 أحرف على الأقل");
+      return;
+    }
+
+    // إذا كل شيء تمام، ننقل المستخدم
+    window.location.href = "create-ride.html";
+  });
+</script>
 </body>
 </html>
