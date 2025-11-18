@@ -35,5 +35,28 @@
       <button type="submit" class="primary-btn">Publish Ride</button>
     </form>
   </div>
+  <script>
+  const form = document.querySelector("form");
+  const resultsList = document.createElement("ul");
+  document.querySelector(".container").appendChild(resultsList);
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    const from = form.querySelector("input[placeholder*='Gate']").value;
+    const to = form.querySelector("input[placeholder='Destination']").value;
+    const date = form.querySelector("input[type='date']").value;
+    const time = form.querySelector("input[type='time']").value;
+    const seats = form.querySelector("input[type='number']").value;
+
+    // create new list item
+    const li = document.createElement("li");
+    li.textContent = ${from} → ${to} | ${seats} seats | ${date} ${time};
+    resultsList.appendChild(li);
+
+    // clear form after submission
+    form.reset();
+  });
+</script>
 </body>
 </html>
