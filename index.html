@@ -5,8 +5,8 @@
   <title>CampusRide - Welcome</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #2196F3, #E3F2FD);
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f4f9;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,29 +18,38 @@
       background: #fff;
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 360px;
     }
     h1 {
-      color: #1976D2;
-      margin-bottom: 20px;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 14px;
     }
     button {
-      padding: 12px 24px;
-      font-size: 18px;
-      background: #4CAF50;
+      padding: 12px 28px;
+      font-size: 16px;
+      background: #1976D2;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
     button:hover {
-      background: #45a049;
+      background: #0D47A1;
     }
   </style>
 </head>
 <body>
   <div class="welcome-container">
-    <h1>Welcome to CampusRide 🚀</h1>
+    <h1>Welcome to CampusRide</h1>
+    <p>A simple and professional way to connect rides</p>
     <button onclick="window.location.href='login.html'">Start</button>
   </div>
 </body>
