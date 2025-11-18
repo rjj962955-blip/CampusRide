@@ -48,5 +48,39 @@
     window.location.href = "create-ride.html";
   });
 </script>
+  <script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.querySelector("input[type='email']").value;
+    const password = document.querySelector("input[type='password']").value;
+
+    if (!email.endsWith("@imamu.edu.sa")) {
+      alert("Please use a university email ending with @imamu.edu.sa");
+      return;
+    }
+
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters");
+      return;
+    }
+
+    // Show role selection
+    const container = document.querySelector(".container");
+    container.innerHTML = `
+      <h2>Select your role</h2>
+      <button id="driverBtn">Driver</button>
+      <button id="passengerBtn">Passenger</button>
+    `;
+
+    document.getElementById("driverBtn").addEventListener("click", function() {
+      window.location.href = "create-ride.html";
+    });
+
+    document.getElementById("passengerBtn").addEventListener("click", function() {
+      window.location.href = "find-ride.html";
+    });
+  });
+</script>
 </body>
 </html>
