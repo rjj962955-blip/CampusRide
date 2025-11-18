@@ -17,7 +17,7 @@
       padding: 20px 30px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 320px;
+      width: 340px;
       text-align: center;
     }
     h2 {
@@ -39,14 +39,31 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 16px;
     }
     button:hover {
       background: #45a049;
     }
+    /* تنسيق أزرار الدور */
+    .role-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
     .role-btn {
-      width: 45%;
-      margin: 10px;
+      flex: 1;
+      margin: 0 5px;
+      padding: 12px;
       background: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
     .role-btn:hover {
       background: #1976D2;
@@ -88,8 +105,10 @@
       // replace form with role selection
       container.innerHTML = `
         <h2>Select your role</h2>
-        <button id="driverBtn" class="role-btn">Driver</button>
-        <button id="passengerBtn" class="role-btn">Passenger</button>
+        <div class="role-container">
+          <button id="driverBtn" class="role-btn">🚗 Driver</button>
+          <button id="passengerBtn" class="role-btn">👤 Passenger</button>
+        </div>
       `;
 
       document.getElementById("driverBtn").addEventListener("click", function() {
