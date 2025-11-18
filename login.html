@@ -29,22 +29,22 @@
   </div>
   <script>
   document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault(); // يمنع الإرسال التلقائي
+    e.preventDefault(); // prevent default form submission
 
     const email = document.querySelector("input[type='email']").value;
     const password = document.querySelector("input[type='password']").value;
 
     if (!email.endsWith("@imamu.edu.sa")) {
-      alert("يرجى استخدام بريد جامعي ينتهي بـ @imamu.edu.sa");
+      alert("Please use a university email ending with @imamu.edu.sa");
       return;
     }
 
     if (password.length < 6) {
-      alert("كلمة المرور يجب أن تكون 6 أحرف على الأقل");
+      alert("Password must be at least 6 characters");
       return;
     }
 
-    // إذا كل شيء تمام، ننقل المستخدم
+    // If everything is valid, redirect to Create Ride page
     window.location.href = "create-ride.html";
   });
 </script>
