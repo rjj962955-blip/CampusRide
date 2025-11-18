@@ -10,3 +10,79 @@ button {
   border: none;
   border-radius: 5px;
 }
+/* Layout */
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f8fb;
+  color: #222;
+}
+
+/* Top navigation */
+.top-nav {
+  display: flex;
+  gap: 16px;
+  padding: 14px 20px;
+  background: #2b5dab;
+}
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.top-nav a:hover {
+  background: rgba(255,255,255,0.15);
+}
+.top-nav .active {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Card + container */
+.container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 0 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 24px;
+}
+
+/* Form */
+.form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: bold;
+}
+.form input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d7dce2;
+  border-radius: 8px;
+  outline: none;
+}
+.form input:focus {
+  border-color: #2b5dab;
+  box-shadow: 0 0 0 3px rgba(43,93,171,0.15);
+}
+.primary-btn {
+  width: 100%;
+  margin-top: 16px;
+  background: #2b5dab;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.primary-btn:hover {
+  background: #234a8f;
+}
+.helper {
+  text-align: center;
+  margin-top: 10px;
+}
+.helper a { color: #2b5dab; }
