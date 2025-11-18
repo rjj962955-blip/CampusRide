@@ -86,3 +86,6 @@ body {
   margin-top: 10px;
 }
 .helper a { color: #2b5dab; }
+form input[type="number"] {
+  width: 80px;
+}
