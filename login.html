@@ -44,7 +44,6 @@
     button:hover {
       background: #45a049;
     }
-    /* تنسيق أزرار الدور */
     .role-container {
       display: flex;
       justify-content: space-around;
@@ -90,19 +89,17 @@
       const email = form.querySelector("input[type='email']").value;
       const password = form.querySelector("input[type='password']").value;
 
-      // check university email
       if (!email.endsWith("@imamu.edu.sa")) {
         alert("Please use a university email ending with @imamu.edu.sa");
         return;
       }
 
-      // check password length
       if (password.length < 6) {
         alert("Password must be at least 6 characters");
         return;
       }
 
-      // replace form with role selection
+      // Show role selection
       container.innerHTML = `
         <h2>Select your role</h2>
         <div class="role-container">
